@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mente Blindada Science - Official App</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0b0f19;
+            color: #f1f5f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            padding: 2rem 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(180deg, #111827 0%, #0b0f19 100%);
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.2);
+            color: #818cf8;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p.subtitle {
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+        main {
+            flex: 1;
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+        .card {
+            background: #1e293b;
+            border-radius: 16px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+            margin-bottom: 2rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #f8fafc;
+        }
+        p {
+            color: #cbd5e1;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+        }
+        .feature-box {
+            background: #0f172a;
+            padding: 1.25rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .feature-box h3 {
+            font-size: 1.1rem;
+            color: #38bdf8;
+            margin-bottom: 0.5rem;
+        }
+        .feature-box p {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            margin-bottom: 0;
+        }
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            background: #090d16;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #818cf8;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="badge">Official Automation Application</span>
+        <h1>Mente Blindada Science Studio</h1>
+        <p class="subtitle">
+            Plataforma de automação e distribuição de conteúdo educativo focado em neurociência, psicologia comportamental e desenvolvimento pessoal.
+        </p>
+    </header>
+
+    <main>
+        <div class="card">
+            <h2>Sobre a Aplicação</h2>
+            <p>
+                O <strong>Mente Blindada Science Studio</strong> é uma ferramenta desenvolvida para gerenciar, editar e publicar vídeos verticais curtos (Shorts, Reels, TikTok) de caráter científico e educativo diretamente nos canais oficiais da marca <strong>@menteblindadascience</strong>.
+            </p>
+            <p>
+                A aplicação utiliza integrações oficiais de API (TikTok Content Posting API, YouTube Data API e Meta Graph API) respeitando integralmente as diretrizes de desenvolvedor e privacidade de cada plataforma.
+            </p>
+
+            <div class="features">
+                <div class="feature-box">
+                    <h3>🎬 Edição & Formatação</h3>
+                    <p>Processamento automatizado de cortes com legendas sincronizadas e alta legibilidade.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>🚀 Publicação Segura</h3>
+                    <p>Distribuição de vídeos direta via OAuth oficial autorizado pelo proprietário do canal.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>🔒 Privacidade & Compliance</h3>
+                    <p>Sem compartilhamento com terceiros. Acesso restrito e focado na operação do canal.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mente Blindada Science. Todos os direitos reservados.</p>
+        <p style="margin-top: 0.75rem;">
+            <a href="terms.html">Termos de Serviço</a> | 
+            <a href="privacy.html">Política de Privacidade</a>
+        </p>
+    </footer>
+</body>
+</html>
