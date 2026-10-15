@@ -79,19 +79,31 @@
 <body>
     <div class="card">
         <div class="icon">✓</div>
-        <h1>Autorização Concluída!</h1>
-        <p>A conta do <strong>TikTok</strong> foi vinculada com sucesso ao <strong>Mente Blindada Studio</strong>.</p>
+        <h1>Finalizando conexão...</h1>
+        <p>Enviando a autorização do <strong>TikTok</strong> para o <strong>Mente Blindada Studio</strong> aberto no seu computador.</p>
         <div id="codeBox" class="code-box"></div>
-        <button class="btn" onclick="window.close()">Voltar ao Estúdio</button>
+        <a id="localLink" class="btn" href="http://localhost:8000/">Concluir no Estúdio</a>
     </div>
 
     <script>
+        // O app local troca o código pelo token. O redirect_uri registrado no TikTok é esta página,
+        // então ela repassa o code (ou o erro) para o backend em localhost.
         const urlParams = new URLSearchParams(window.location.search);
         const code = urlParams.get('code');
-        if (code) {
+        const error = urlParams.get('error');
+        // O state é o código de segurança que o app gerou ao abrir a autorização
+        const state = urlParams.get('state');
+        if (code || error) {
+            const forward = new URLSearchParams();
+            if (code) forward.set('code', code);
+            if (error) forward.set('error', error);
+            if (state) forward.set('state', state);
+            const localUrl = 'http://localhost:8000/api/tiktok/callback?' + forward.toString();
+            document.getElementById('localLink').href = localUrl;
             const box = document.getElementById('codeBox');
             box.style.display = 'block';
-            box.textContent = 'Auth Code: ' + code.substring(0, 24) + '... (Autorizado)';
+            box.textContent = 'Se não for redirecionado, verifique se o app está aberto e clique no botão abaixo.';
+            window.location.replace(localUrl);
         }
     </script>
 </body>
