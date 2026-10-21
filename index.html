@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head> <link rel="icon" type="image/png" href="logo.png">
-<link rel="apple-touch-icon" href="logo.png"><head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mente Blindada Science - Official App</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
@@ -20,6 +21,9 @@
             text-align: center;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             background: linear-gradient(180deg, #111827 0%, #0b0f19 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .badge {
             display: inline-block;
@@ -31,6 +35,13 @@
             font-weight: 600;
             margin-bottom: 1rem;
             border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+        .logo-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            object-fit: cover;
         }
         h1 {
             font-size: 2.25rem;
@@ -115,15 +126,15 @@
 </head>
 <body>
     <header>
-      <span class="badge">Official Automation Application</span>
+        <span class="badge">Official Automation Application</span>
 
-<img src="logo.png" alt="Mente Blindada Science Studio" style="width: 80px; height: 80px; border-radius: 50%;">
+        <img src="logo.png" alt="Mente Blindada Science Studio" class="logo-img">
 
-<h1>Mente Blindada Science Studio</h1>
+        <h1>Mente Blindada Science Studio</h1>
 
-<p class="subtitle">
-  Plataforma de automação e distribuição de conteúdo educativo focado em neurociência, psicologia comportamental e desenvolvimento pessoal.
-</p>
+        <p class="subtitle">
+            Plataforma de automação e distribuição de conteúdo educativo focado em neurociência, psicologia comportamental e desenvolvimento pessoal.
+        </p>
     </header>
 
     <main>
